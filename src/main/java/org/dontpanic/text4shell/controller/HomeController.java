@@ -28,7 +28,8 @@ public class HomeController {
         model.put("time", interpolator.replace(uiStrings.get("TIME")));
         model.put("file_content", interpolator.replace(uiStrings.get("FILE_CONTENTS")));
         model.put("rce", interpolator.replace(uiStrings.get("RCE")));
-        model.put("file_content2", interpolator.replace(uiStrings.get("FILE_CONTENTS_2")));
+        // commons-text prevents the file from being written. Do not attempt to read it.
+        // model.put("file_content2", interpolator.replace(uiStrings.get("FILE_CONTENTS_2")));
         return "index";
     }
 
